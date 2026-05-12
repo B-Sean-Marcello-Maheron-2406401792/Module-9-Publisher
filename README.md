@@ -39,3 +39,7 @@ Lonjakan (spike) pada grafik di atas merepresentasikan aktivitas pengiriman pesa
 ### Monitoring chart based on publisher.
 
 ![img_3.png](img_3.png)
+
+### Refleksi
+
+Eksperimen pada lingkungan cloud menggunakan GitHub Codespaces ini menunjukkan bagaimana sistem berbasis event-driven tetap dapat beroperasi secara transparan meskipun komponennya berada di infrastruktur yang berbeda. Dengan memindahkan sistem ke cloud, terlihat bahwa Message Broker (RabbitMQ) bertindak sebagai titik pusat (hub) yang memungkinkan komunikasi asinkron tetap berjalan lancar melalui protokol AMQP, meskipun terdapat tantangan teknis tambahan seperti konfigurasi keamanan port dan kebutuhan akan tunneling (seperti port forwarding) untuk akses dari mesin lokal. Fenomena lonjakan pesan (spike) yang dapat direplikasi di cloud membuktikan bahwa penanganan beban kerja secara paralel melalui banyak subscriber tetap menjadi solusi yang paling efektif untuk menjaga stabilitas sistem saat menghadapi volume data yang tinggi. Selain itu, pengerjaan di lingkungan Linux cloud ini juga membantu menghindari keterbatasan sistem operasi tertentu (seperti buffer overrun pada Windows) dan memberikan simulasi yang lebih akurat terhadap kondisi operasional di lingkungan produksi yang sesungguhnya.
