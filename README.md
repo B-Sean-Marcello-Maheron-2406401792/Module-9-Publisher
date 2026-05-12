@@ -36,6 +36,6 @@ Lonjakan (spike) pada grafik di atas merepresentasikan aktivitas pengiriman pesa
 
 ![img_4.png](img_4.png)
 
-
+### Monitoring chart based on publisher.
 
 ![img_3.png](img_3.png)
