@@ -28,3 +28,14 @@ Lonjakan (spike) pada grafik di atas merepresentasikan aktivitas pengiriman pesa
 * Setiap kali perintah `cargo run` dijalankan pada Publisher, 5 event dikirimkan secara instan ke RabbitMQ. Hal ini menyebabkan kenaikan mendadak pada laju pesan masuk (*incoming rate*).
 * Jika Publisher dijalankan berulang kali dalam waktu singkat, grafik akan menunjukkan beberapa puncak (spike) yang berdekatan.
 * Setelah pesan diterima oleh broker, Subscriber akan langsung mengambilnya (jika aktif), sehingga grafik akan turun kembali ke angka nol setelah semua pesan berhasil diproses.
+
+
+# BONUS
+
+### “Sending and processing event.”
+
+![img_4.png](img_4.png)
+
+
+
+![img_3.png](img_3.png)

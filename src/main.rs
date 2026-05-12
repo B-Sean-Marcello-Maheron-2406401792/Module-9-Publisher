@@ -10,7 +10,7 @@ pub struct UserCreatedEventMessage {
 #[tokio::main]
 async fn main() {
     // 1. Koneksi ke RabbitMQ
-    let addr = "amqp://guest:guest@localhost:5672";
+    let addr = "amqps://sean:password123@automatic-fiesta-7v54gxv764wgh497-5672.app.github.dev:443";
     let conn = Connection::connect(addr, ConnectionProperties::default())
         .await
         .unwrap();
