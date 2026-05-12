@@ -10,3 +10,12 @@ Kesamaan URL tersebut menunjukkan bahwa kedua program, baik publisher maupun sub
 
 ![img.png](img.png)
 
+### Tampilan pengiriman event ke message broker
+![img_2.png](img_2.png)
+
+Pada tangkapan layar di atas, terjadi proses **Event-Driven Communication** sebagai berikut:
+1. **Publisher** dijalankan dan berhasil membuat koneksi ke RabbitMQ server di `localhost:5672`.
+2. Publisher mengirimkan (**Publish**) 5 buah event `UserCreatedEventMessage` ke antrean (*queue*) bernama `user_created`.
+3. Data yang dikirim diserialisasi menggunakan format **Borsh** untuk memastikan efisiensi payload.
+4. **Subscriber** yang sedang dalam posisi *listening*, secara otomatis mendeteksi adanya pesan baru di dalam queue.
+5. Subscriber mengonsumsi (**Consume**) pesan tersebut, melakukan deserialisasi, dan mencetak datanya ke konsol dengan **Sean's Computer [2406401792]**.
